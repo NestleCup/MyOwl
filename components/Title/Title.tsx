@@ -1,8 +1,8 @@
 import React from 'react';
-import { HtagProps } from './Htag.props';
-import style from './Htag.module.css';
+import { TitleProps } from './Title.props';
+import style from './Title.module.css';
 
-export const Htag = ({ tag, children }: HtagProps): JSX.Element => {
+export const Title = ({ tag, children }: TitleProps): JSX.Element => {
   switch (tag) {
     case 'h1':
       return <h1 className={style.h1}>{children}</h1>;
