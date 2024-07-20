@@ -2,26 +2,16 @@ import Button from '@/components/Button/Button';
 import { Title } from '@/components/Title/Title';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { Tag } from '@/components';
-import { useEffect, useState } from 'react';
+import Rating from '@/components/Rating/Rating';
+import { useState } from 'react';
 
 export default function Home(): JSX.Element {
-  const [counter, setCounter] = useState<number>(0);
-  useEffect(() => {
-    console.log('counter' + counter);
-    return function cleanup() {
-      console.log('Unmount');
-    };
-  }, []);
+  const [rating, setRating] = useState<number>(2);
   return (
     <>
-      {counter}
       <Title tag="h3">Текст</Title>
-      <Button appearance="primary" onClick={() => setCounter((x) => x + 1)}>
-        Кнопка
-      </Button>
-      <Button appearance="ghost" onClick={() => setCounter((x) => x - 1)}>
-        Кнопка
-      </Button>
+      <Button appearance="primary">Кнопка</Button>
+      <Button appearance="ghost">Кнопка</Button>
       <Paragraph>Маленький</Paragraph>
       <Paragraph size="m">Маленький</Paragraph>
       <Paragraph>Маленький</Paragraph>
@@ -40,6 +30,7 @@ export default function Home(): JSX.Element {
       <Tag size="medium" color="primary">
         HH.ru
       </Tag>
+      <Rating rating={rating} isEditable setRating={setRating} />
     </>
   );
 }
