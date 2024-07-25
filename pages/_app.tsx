@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
-        <title>MyOwn</title>
+        <title>OWLtop</title>
         <link rel="icon" href="../public/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
