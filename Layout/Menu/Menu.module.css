@@ -1,27 +1,56 @@
-.footer {
-  background: var(--primary);
-  color: var(--white);
-  font-size: 16px;
-  line-height: 20px;
+.firstLevel {
+  align-items: center;
   display: grid;
-  padding: 25px 30px;
-  grid-template-columns: 1fr auto auto;
-  gap: 40px;
-  grid-template-areas: 'block link1 link2';
+  font-size: 18px;
+  font-weight: 500;
+  gap: 20px;
+  grid-template-columns: 24px 1fr;
+  line-height: 25px;
+  margin-top: 20px;
 }
 
-.footer a:hover {
-  color: var(--gray-light);
+.firstLevelActive,
+.firstLevel:hover {
+  color: var(--primary);
 }
 
-@media (max-width: 765px) {
-  .footer {
-    gap: 10px;
+.firstLevelActive svg,
+.firstLevel:hover svg {
+  fill: var(--primary);
+}
 
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'block '
-      'link1 '
-      'link2';
-  }
+.secondLevel {
+  color: var(--gray-dark);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.secondBlock {
+  border-left: 1px solid #dfdfdf;
+  margin-left: 12px;
+  margin-top: 15px;
+  padding-left: 32px;
+}
+
+.secondLevelBlockOpened:last-child {
+  margin-bottom: 20px;
+}
+
+.thirdLevel {
+  color: var(--gray-dark);
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+.thirdLevelActive,
+.thirdLevel:hover {
+  color: var(--primary);
 }
